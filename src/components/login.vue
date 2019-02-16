@@ -15,17 +15,17 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       formdata: {
-        username: "",
-        password: ""
+        username: '',
+        password: ''
       }
-    };
+    }
   },
   methods: {
     // 登录请求
-    async handleLogin() {
+    async handleLogin () {
       // 前提:api-server-> node app.js
       // 请求没发送?
       // 1. url写错?
@@ -39,30 +39,30 @@ export default {
       // const res = this.$http.post();
       // console.log(res);
 
-      const res = await this.$http.post(`login`, this.formdata);
-      console.log(res);
+      const res = await this.$http.post(`login`, this.formdata)
+      console.log(res)
       const {
         data: {
           data: { token },
           meta: { msg, status }
         }
-      } = res;
+      } = res
 
       if (status === 200) {
         // 把正确的用户的token保存起来
         // 存值
-        localStorage.setItem("token", token);
+        localStorage.setItem('token', token)
         // 取值
         // const aa = localStorage.getItem("token");
         // console.log(aa);
 
         // 渲染home.vue <- 改标识 <- js改标识
         this.$router.push({
-          name: "home"
-        });
+          name: 'home'
+        })
       } else {
         // 提示框 -> UI
-        this.$message.error(msg);
+        this.$message.error(msg)
       }
 
       /*
@@ -91,7 +91,7 @@ export default {
       */
     }
   }
-};
+}
 </script>
 
 <style>
@@ -114,4 +114,3 @@ export default {
   width: 100%;
 }
 </style>
-

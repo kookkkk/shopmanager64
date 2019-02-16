@@ -3,7 +3,7 @@
     <el-header>
       <el-row>
         <el-col :span="4">
-          <img src="@/assets/logo.png" alt="图片加载失败">
+          <!-- <img src="@/assets/logo.png" alt="图片加载失败"> -->
         </el-col>
         <el-col :span="19" class="middle">
           <h2>电商后台管理系统</h2>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style>

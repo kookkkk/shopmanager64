@@ -6,9 +6,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/base.css'
 import App from './App'
 import router from './router'
-import axios from 'axios'
-axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/'
-Vue.prototype.$http = axios
+// import axios from 'axios'
+// axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/'
+// Vue.prototype.$http = axios
 
 // 所有的Vue插件都是这样用
 // Vue.use(VueRouter)
