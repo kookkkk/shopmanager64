@@ -46,7 +46,7 @@
               <span>角色列表</span>
             </el-menu-item>
 
-            <el-menu-item index="1-1">
+            <el-menu-item index="rights">
               <i class="el-icon-menu"></i>
               <span>权限列表</span>
             </el-menu-item>
@@ -118,29 +118,29 @@ export default {
 
   // },
   // created
-  beforeMount() {
-    if (!localStorage.getItem("token")) {
+  beforeMount () {
+    if (!localStorage.getItem('token')) {
       this.$router.push({
-        name: "login"
-      });
-      this.$message.warning("请先登录");
+        name: 'login'
+      })
+      this.$message.warning('请先登录')
     }
   },
-  mounted() {},
+  mounted () {},
   methods: {
     // 退出
-    handleLoginout() {
+    handleLoginout () {
       // 1. 清除token
-      localStorage.clear();
+      localStorage.clear()
       // 2. 来到登录
       this.$router.push({
-        name: "login"
-      });
+        name: 'login'
+      })
       // 3. 提示
-      this.$message.warning("退出成功");
+      this.$message.warning('退出成功')
     }
   }
-};
+}
 </script>
 
 <style>
